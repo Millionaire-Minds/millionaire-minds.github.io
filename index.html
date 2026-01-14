@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Millionaire Minds</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #ffffff;
+    }
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      background: #000;
+      position: sticky;
+      top: 0;
+    }
+    .post {
+      max-width: 720px;
+      margin: 24px auto;
+      padding: 24px;
+      background: #1c1c1c;
+      border-radius: 8px;
+      line-height: 1.5;
+    }
+    .loader {
+      text-align: center;
+      padding: 40px;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Millionaire Minds</h1>
+  <p>Principles and frameworks for long-term wealth</p>
+</header>
+
+<div id="content"></div>
+<div class="loader" id="loader">Loading…</div>
+
+<script>
+  const posts = [
+    "Wealth begins with control of time.",
+    "Skills compound faster than money.",
+    "Leverage beats effort.",
+    "Long-term thinking is rare.",
+    "Attention is the real currency.",
+    "Systems outperform goals.",
+    "Ownership changes behavior.",
+    "Patience is disguised discipline.",
+    "Environment shapes ambition.",
+    "Consistency is underrated."
+  ];
+
+  let index = 0;
+  const content = document.getElementById("content");
+
+  function loadMore() {
+    for (let i = 0; i < 3 && index < posts.length; i++) {
+      const div = document.createElement("div");
+      div.className = "post";
+      div.textContent = posts[index++];
+      content.appendChild(div);
+    }
+  }
+
+  window.addEventListener("scroll", () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+      loadMore();
+    }
+  });
+
+  loadMore();
+</script>
+
+</body>
+</html>
