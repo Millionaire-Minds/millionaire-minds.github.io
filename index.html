@@ -53,11 +53,7 @@
       right:0;
       bottom:-1px;
       height:160px;
-      background:linear-gradient(
-        to bottom,
-        rgba(11,11,11,0) 0%,
-        var(--bg) 100%
-      );
+      background:linear-gradient(to bottom, rgba(11,11,11,0), var(--bg));
     }
 
     .Porsche-inner{
@@ -65,50 +61,53 @@
       width:100%;
       max-width:var(--max);
       background:var(--panel);
-      border-radius:14px;
-      padding:36px 28px 26px;
+      border-radius:16px;
+      padding:34px 36px 28px;
       backdrop-filter:blur(10px);
       -webkit-backdrop-filter:blur(10px);
       box-shadow:0 18px 60px rgba(0,0,0,0.45);
     }
 
     /* LOGO */
-    .hero-logo{
-      position:absolute;
-      top:-56px;
-      left:28px; /* aligns with text padding so it never passes the M */
-      width:110px; /* ~200% size */
+    .logo-wrap{
+      position:relative;
+      margin-bottom:10px;
+    }
+
+    .logo{
+      width:120px; /* 200% intentional size */
       height:auto;
-      z-index:3;
+      display:block;
+      margin-left:2px; /* ensures left edge stays inside the M */
     }
 
     h1{
       margin:0 0 10px;
-      font-size:44px;
+      font-size:46px;
       letter-spacing:0.2px;
     }
 
     .tagline{
       margin:0;
-      color:var(--muted);
       font-size:16px;
       line-height:1.5;
+      color:var(--muted);
     }
 
     main{
       max-width:var(--max);
       margin:0 auto;
-      padding:36px 20px 90px;
+      padding:44px 20px 100px;
       line-height:1.75;
       font-size:18px;
     }
 
     section{
-      margin:0 0 44px;
+      margin:0 0 54px;
     }
 
     h2{
-      margin:0 0 14px;
+      margin:0 0 16px;
       font-size:22px;
       letter-spacing:0.2px;
     }
@@ -125,13 +124,13 @@
     .rule{
       height:1px;
       background:var(--line);
-      margin:16px 0 18px;
+      margin:18px 0 22px;
     }
 
     .callout{
       border:1px solid var(--line);
       border-radius:12px;
-      padding:18px;
+      padding:20px;
       background:rgba(255,255,255,0.03);
     }
 
@@ -147,20 +146,20 @@
     .two-col{
       display:grid;
       grid-template-columns:1fr;
-      gap:14px;
+      gap:16px;
     }
 
     @media(min-width:860px){
       .two-col{
         grid-template-columns:1fr 1fr;
-        gap:18px;
+        gap:20px;
       }
     }
 
     .card{
       border:1px solid var(--line);
       border-radius:12px;
-      padding:18px;
+      padding:20px;
       background:rgba(255,255,255,0.02);
     }
 
@@ -175,7 +174,7 @@
     .cta{
       border:1px solid var(--line);
       border-radius:12px;
-      padding:18px;
+      padding:20px;
       background:rgba(255,255,255,0.03);
     }
 
@@ -191,11 +190,13 @@
 <header class="Porsche">
   <div class="Porsche-inner">
 
-    <img
-      src="MM - White no BKGD.png"
-      alt="Millionaire Minds Logo"
-      class="hero-logo"
-    />
+    <div class="logo-wrap">
+      <img
+        src="MM - White no BKGD.png"
+        alt="Millionaire Minds Logo"
+        class="logo"
+      />
+    </div>
 
     <h1>Millionaire Minds</h1>
     <p class="tagline">
@@ -227,7 +228,7 @@
   </p>
 
   <p>
-    At its core, this is a space where people come together to think clearly about their lives, work intentionally on their goals, and learn how to create the habits, systems, and routines that support long-term progress.
+    At its core, this is a space where people come together to think clearly about their lives, work intentionally on their goals, and learn how to create the habits, systems, and routines that support long-term progress—drawing on shared perspective, support, and accountability from others who are building alongside them.
   </p>
 
   <div class="rule"></div>
@@ -235,8 +236,119 @@
   <div class="callout">
     <p><strong>This is not a motivational group or a place for quick wins.</strong></p>
     <p>It is a space designed for long-term thinking, self-development, and personal responsibility.</p>
-    <p style="margin-bottom:0;">
-      <strong>The goal is simple:</strong> to create an environment where progress compounds.
+    <p style="margin-bottom:0;"><strong>The goal is simple:</strong> to create an environment where progress compounds.</p>
+  </div>
+</section>
+
+<section id="why">
+  <h2>Why This Group Exists</h2>
+
+  <p>Many people want more from life but lack:</p>
+  <ul>
+    <li>Structure</li>
+    <li>Clarity</li>
+    <li>Consistency</li>
+    <li>A community that supports growth without pressure</li>
+  </ul>
+
+  <p style="margin-top:18px;">
+    Millionaire Minds was created to fill that gap by bringing similar-minded people together who want to grow with intention and consistency.
+  </p>
+
+  <p>By meeting weekly, reflecting honestly, and learning together, members begin to:</p>
+  <ul>
+    <li>Understand where they are going</li>
+    <li>Identify what actually matters to them</li>
+    <li>Build confidence through action, not comparison</li>
+  </ul>
+</section>
+
+<section id="what-it-is">
+  <h2>What Millionaire Minds Is (and Isn’t)</h2>
+
+  <div class="two-col">
+    <div class="card">
+      <p class="label">This group is</p>
+      <ul>
+        <li>Thoughtful</li>
+        <li>Practical</li>
+        <li>Skill-focused</li>
+        <li>Long-term oriented</li>
+        <li>Collaborative, not competitive</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <p class="label">This group is not</p>
+      <ul>
+        <li>A get-rich-quick space</li>
+        <li>A motivational hype circle</li>
+        <li>A comparison-based environment</li>
+        <li>A place to impress others</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="margin-top:18px;">Growth here is quiet, intentional, and personal.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills & Areas of Growth</h2>
+
+  <p>Members often work on areas such as:</p>
+  <ul>
+    <li>Personal discipline and consistency</li>
+    <li>Communication and confidence</li>
+    <li>Financial literacy and decision-making</li>
+    <li>Career and technical skill development</li>
+    <li>Healthy routines and habits</li>
+    <li>Focus, clarity, and follow-through</li>
+  </ul>
+
+  <p style="margin-top:18px;">
+    Everyone’s path is different. The group supports direction, not uniformity.
+  </p>
+</section>
+
+<section id="ripple">
+  <h2>The Ripple Effect</h2>
+
+  <p>As individuals grow, the impact extends far beyond the weekly meetings.</p>
+
+  <p>
+    Clearer thinking leads to better decisions. Better decisions improve careers,
+    relationships, and well-being. Those changes naturally influence families,
+    teams, and communities.
+  </p>
+
+  <p>
+    Millionaire Minds is designed to create positive ripple effects, one person at a time.
+  </p>
+</section>
+
+<section id="who">
+  <h2>Who This Is For</h2>
+
+  <p>This group is for people who:</p>
+  <ul>
+    <li>Want to be more intentional with their time and energy</li>
+    <li>Value growth over appearance</li>
+    <li>Are willing to reflect honestly</li>
+    <li>Want to build skills and habits that compound over years, not weeks—alongside others on a similar path</li>
+  </ul>
+
+  <p style="margin-top:18px;">
+    No prior experience is required—only curiosity and willingness.
+  </p>
+</section>
+
+<section id="join">
+  <h2>Interested in Joining?</h2>
+
+  <div class="cta">
+    <strong>If this vision resonates, you’re invited to learn more or express interest.</strong>
+    <p style="margin:0;color:var(--muted);">
+      A simple contact method can live here when you’re ready.
     </p>
   </div>
 </section>
