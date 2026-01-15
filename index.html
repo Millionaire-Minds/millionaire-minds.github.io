@@ -9,6 +9,7 @@
     :root{
       --bg:#0b0b0b;
       --panel:rgba(18,18,18,0.78);
+      --logo-panel:rgba(18,18,18,0.65);
       --text:rgba(255,255,255,0.92);
       --muted:rgba(255,255,255,0.72);
       --line:rgba(255,255,255,0.10);
@@ -61,8 +62,8 @@
       width:100%;
       max-width:var(--max);
       background:var(--panel);
-      border-radius:16px;
-      padding:34px 36px 28px;
+      border-radius:18px;
+      padding:34px 36px 30px;
       backdrop-filter:blur(10px);
       -webkit-backdrop-filter:blur(10px);
       box-shadow:0 18px 60px rgba(0,0,0,0.45);
@@ -70,15 +71,17 @@
 
     /* LOGO */
     .logo-wrap{
-      position:relative;
-      margin-bottom:10px;
+      display:inline-block;
+      padding:14px 16px;
+      border-radius:14px;
+      background:var(--logo-panel);
+      margin-bottom:18px;
     }
 
     .logo{
-      width:240px; /* 200% intentional size */
+      width:120px;
       height:auto;
       display:block;
-      margin-left:2px; /* ensures left edge stays inside the M */
     }
 
     h1{
@@ -114,7 +117,6 @@
 
     p{
       margin:0 0 22px;
-      color:var(--text);
     }
 
     #vision p{
@@ -191,17 +193,11 @@
   <div class="Porsche-inner">
 
     <div class="logo-wrap">
-      <img
-        src="MM - White no BKGD.png"
-        alt="Millionaire Minds Logo"
-        class="logo"
-      />
+      <img src="MM - White no BKGD.png" alt="Millionaire Minds Logo" class="logo" />
     </div>
 
     <h1>Millionaire Minds</h1>
-    <p class="tagline">
-      A weekly environment for clarity, skill-building, and long-term growth.
-    </p>
+    <p class="tagline">A weekly environment for clarity, skill-building, and long-term growth.</p>
 
   </div>
 </header>
@@ -211,25 +207,15 @@
 <section id="vision">
   <h2>The Vision</h2>
 
-  <p>
-    Millionaire Minds is a group of aspiring entrepreneurs and growth-oriented individuals who gather regularly to support one another as we build practical skills, strengthen our mindset, and take consistent action together toward meaningful personal goals.
-  </p>
+  <p>Millionaire Minds is a group of aspiring entrepreneurs and growth-oriented individuals who gather regularly to support one another as we build practical skills, strengthen our mindset, and take consistent action together toward meaningful personal goals.</p>
 
-  <p>
-    To have a Millionaire Mind means understanding that true value extends far beyond the accumulation of financial wealth. It is developed through experience, challenge, and reflection—shaping the knowledge, self-awareness, mindset, and social intelligence that allow someone to consistently create value for others.
-  </p>
+  <p>To have a Millionaire Mind means understanding that true value extends far beyond the accumulation of financial wealth. It is developed through experience, challenge, and reflection—shaping the knowledge, self-awareness, mindset, and social intelligence that allow someone to consistently create value for others.</p>
 
-  <p>
-    A Millionaire Mind solves problems, builds trust, communicates clearly, and contributes meaningfully. When a person’s thinking becomes valuable, opportunity follows—and wealth becomes a byproduct, not the pursuit.
-  </p>
+  <p>A Millionaire Mind solves problems, builds trust, communicates clearly, and contributes meaningfully. When a person’s thinking becomes valuable, opportunity follows—and wealth becomes a byproduct, not the pursuit.</p>
 
-  <p>
-    The group exists to help members identify and work toward goals they personally consider worth a million—goals defined by their own values, interests, and vision for their life.
-  </p>
+  <p>The group exists to help members identify and work toward goals they personally consider worth a million—goals defined by their own values, interests, and vision for their life.</p>
 
-  <p>
-    At its core, this is a space where people come together to think clearly about their lives, work intentionally on their goals, and learn how to create the habits, systems, and routines that support long-term progress—drawing on shared perspective, support, and accountability from others who are building alongside them.
-  </p>
+  <p>At its core, this is a space where people come together to think clearly about their lives, work intentionally on their goals, and learn how to create the habits, systems, and routines that support long-term progress—drawing on shared perspective, support, and accountability from others who are building alongside them.</p>
 
   <div class="rule"></div>
 
@@ -251,9 +237,7 @@
     <li>A community that supports growth without pressure</li>
   </ul>
 
-  <p style="margin-top:18px;">
-    Millionaire Minds was created to fill that gap by bringing similar-minded people together who want to grow with intention and consistency.
-  </p>
+  <p style="margin-top:18px;">Millionaire Minds was created to fill that gap by bringing similar-minded people together who want to grow with intention and consistency.</p>
 
   <p>By meeting weekly, reflecting honestly, and learning together, members begin to:</p>
   <ul>
@@ -305,25 +289,15 @@
     <li>Focus, clarity, and follow-through</li>
   </ul>
 
-  <p style="margin-top:18px;">
-    Everyone’s path is different. The group supports direction, not uniformity.
-  </p>
+  <p style="margin-top:18px;">Everyone’s path is different. The group supports direction, not uniformity.</p>
 </section>
 
 <section id="ripple">
   <h2>The Ripple Effect</h2>
 
   <p>As individuals grow, the impact extends far beyond the weekly meetings.</p>
-
-  <p>
-    Clearer thinking leads to better decisions. Better decisions improve careers,
-    relationships, and well-being. Those changes naturally influence families,
-    teams, and communities.
-  </p>
-
-  <p>
-    Millionaire Minds is designed to create positive ripple effects, one person at a time.
-  </p>
+  <p>Clearer thinking leads to better decisions. Better decisions improve careers, relationships, and well-being. Those changes naturally influence families, teams, and communities.</p>
+  <p>Millionaire Minds is designed to create positive ripple effects, one person at a time.</p>
 </section>
 
 <section id="who">
@@ -337,9 +311,7 @@
     <li>Want to build skills and habits that compound over years, not weeks—alongside others on a similar path</li>
   </ul>
 
-  <p style="margin-top:18px;">
-    No prior experience is required—only curiosity and willingness.
-  </p>
+  <p style="margin-top:18px;">No prior experience is required—only curiosity and willingness.</p>
 </section>
 
 <section id="join">
@@ -347,9 +319,7 @@
 
   <div class="cta">
     <strong>If this vision resonates, you’re invited to learn more or express interest.</strong>
-    <p style="margin:0;color:var(--muted);">
-      A simple contact method can live here when you’re ready.
-    </p>
+    <p style="margin:0;color:var(--muted);">A simple contact method can live here when you’re ready.</p>
   </div>
 </section>
 
