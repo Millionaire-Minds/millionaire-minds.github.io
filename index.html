@@ -12,7 +12,7 @@
       --text:rgba(255,255,255,0.92);
       --muted:rgba(255,255,255,0.72);
       --line:rgba(255,255,255,0.10);
-      --max: 920px;
+      --max:920px;
     }
 
     body{
@@ -33,20 +33,31 @@
       overflow:hidden;
       background:url("Porsche.JPG") center/cover no-repeat;
     }
+
     .Porsche::before{
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(to bottom,
+      background:linear-gradient(
+        to bottom,
         rgba(0,0,0,0.25) 0%,
         rgba(0,0,0,0.60) 55%,
-        rgba(0,0,0,0.92) 100%);
+        rgba(0,0,0,0.92) 100%
+      );
     }
+
     .Porsche::after{
       content:"";
       position:absolute;
-      left:0;right:0;bottom:-1px;height:160px;
-      background:linear-gradient(to bottom, rgba(11,11,11,0) 0%, var(--bg) 100%);
+      left:0;
+      right:0;
+      bottom:-1px;
+      height:160px;
+      background:linear-gradient(
+        to bottom,
+        rgba(11,11,11,0) 0%,
+        var(--bg) 100%
+      );
     }
 
     .Porsche-inner{
@@ -61,7 +72,7 @@
       box-shadow:0 18px 60px rgba(0,0,0,0.45);
     }
 
-    /* HERO CONTENT: left-weighted, logo floats above title */
+    /* HERO CONTENT */
     .hero-layout{
       max-width:820px;
     }
@@ -72,21 +83,18 @@
 
     .hero-title-wrap{
       position:relative;
-      display:inline-block; /* keeps the logo aligned to the title block */
+      display:inline-block;
     }
 
-    /* IMPORTANT:
-       For the premium look you described, this file MUST be a transparent PNG of the WHITE MARK ONLY.
-       Put it in the repo root and name it exactly: mm-mark.png
-    */
+    /* Floating logo — transparent, intentional, non-overlapping */
     .hero-mark-float{
       position:absolute;
       left:0;
-      top:-46px; /* adjust -40 to -52 if you want closer/farther from the title */
-      width:96px; /* adjust size here */
+      top:-56px;                /* lifted so it clears the title cleanly */
+      width:72px;               /* readable but restrained */
       height:auto;
       opacity:0.96;
-      filter:drop-shadow(0 18px 48px rgba(0,0,0,0.45));
+      filter:drop-shadow(0 14px 36px rgba(0,0,0,0.4));
       pointer-events:none;
       user-select:none;
     }
@@ -106,13 +114,15 @@
 
     @media (max-width:720px){
       .hero-mark-float{
-        top:-38px;
-        width:80px;
+        top:-48px;
+        width:60px;
       }
-      .hero-title{font-size:36px;}
+      .hero-title{
+        font-size:36px;
+      }
     }
 
-    /* MAIN */
+    /* MAIN CONTENT */
     main{
       max-width:var(--max);
       margin:0 auto;
@@ -120,32 +130,43 @@
       line-height:1.75;
       font-size:18px;
     }
+
     section{margin:0 0 44px;}
     h2{margin:0 0 14px;font-size:22px;letter-spacing:0.2px;}
     p{margin:0 0 22px;color:var(--text);}
 
-    /* Vision-specific spacing */
+    /* Vision spacing */
     #vision p{margin-bottom:28px;}
 
     .rule{height:1px;background:var(--line);margin:16px 0 18px;}
+
     .callout{
       border:1px solid var(--line);
       border-radius:12px;
       padding:18px;
       background:rgba(255,255,255,0.03);
     }
-    ul{margin:10px 0 0 20px;padding:0;color:var(--text);}
+
+    ul{margin:10px 0 0 20px;padding:0;}
     li{margin:10px 0;}
-    .two-col{display:grid;grid-template-columns:1fr;gap:14px;}
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+
     @media(min-width:860px){
       .two-col{grid-template-columns:1fr 1fr;gap:18px;}
     }
+
     .card{
       border:1px solid var(--line);
       border-radius:12px;
       padding:18px;
       background:rgba(255,255,255,0.02);
     }
+
     .label{
       font-size:13px;
       letter-spacing:0.12em;
@@ -153,25 +174,27 @@
       color:var(--muted);
       margin:0 0 10px;
     }
+
     .cta{
       border:1px solid var(--line);
       border-radius:12px;
       padding:18px;
       background:rgba(255,255,255,0.03);
     }
+
     .cta strong{display:block;margin-bottom:6px;}
   </style>
 </head>
 
 <body>
 
-  <!-- Porsche (Hero) -->
+  <!-- HERO -->
   <header class="Porsche">
     <div class="Porsche-inner">
       <div class="hero-layout">
         <div class="hero-text">
           <div class="hero-title-wrap">
-            <img class="hero-mark-float" src="MM - White on Black.png" alt="" />
+            <img class="hero-mark-float" src="MM - White no BKGD.png" alt="" />
             <h1 class="hero-title">Millionaire Minds</h1>
           </div>
           <p class="tagline">A weekly environment for clarity, skill-building, and long-term growth.</p>
@@ -302,5 +325,6 @@
     </section>
 
   </main>
+
 </body>
 </html>
