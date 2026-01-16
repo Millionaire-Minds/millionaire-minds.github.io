@@ -55,19 +55,20 @@
 
     /* ✅ Logo sits ABOVE the blur panel now */
     .hero-brand{
-      display:inline-block;
-      width:fit-content;
-      padding:10px;
-      border-radius:16px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 
-      background:rgba(0,0,0,0.38);
-      backdrop-filter:blur(8px);
-      -webkit-backdrop-filter:blur(8px);
+  padding:2px;                /* was 10px = makes bubble smaller */
+  border-radius:14px;         /* slightly tighter corners */
 
-      box-shadow:0 10px 26px rgba(0,0,0,0.30);
+  background:rgba(0,0,0,0.28); /* lighter background */
+  backdrop-filter:blur(4px);   /* was 8px = less blur */
+  -webkit-backdrop-filter:blur(6px);
 
-      margin:10px 0 14px 2px;
-    }
+  box-shadow:0 10px 22px rgba(0,0,0,0.26); /* slightly softer */
+  margin:10px 0 14px 2px;
+}
 
     .hero-brand img{
       display:block;
