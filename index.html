@@ -53,22 +53,22 @@
       max-width:var(--max);
     }
 
-    /* ✅ Logo sits ABOVE the blur panel now */
+    /* Logo sits ABOVE the blur panel now */
     .hero-brand{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
 
-  padding:2px;                /* was 10px = makes bubble smaller */
-  border-radius:14px;         /* slightly tighter corners */
+      padding:2px;
+      border-radius:14px;
 
-  background:rgba(0,0,0,0.28); /* lighter background */
-  backdrop-filter:blur(4px);   /* was 8px = less blur */
-  -webkit-backdrop-filter:blur(6px);
+      background:rgba(0,0,0,0.28);
+      backdrop-filter:blur(4px);
+      -webkit-backdrop-filter:blur(4px);
 
-  box-shadow:0 10px 22px rgba(0,0,0,0.26); /* slightly softer */
-  margin:10px 0 14px 2px;
-}
+      box-shadow:0 10px 22px rgba(0,0,0,0.26);
+      margin:10px 0 14px 2px;
+    }
 
     .hero-brand img{
       display:block;
@@ -76,7 +76,7 @@
       height:auto;
     }
 
-    /* ✅ Blur panel now ONLY covers title + description */
+    /* Blur panel ONLY covers title + description */
     .hero-card{
       width:100%;
       background:var(--panel);
@@ -155,7 +155,37 @@
       background:rgba(255,255,255,0.03);
     }
 
-    .cta strong{display:block;margin-bottom:6px;}
+    .cta strong{display:block;margin-bottom:10px;}
+
+    /* ✅ Premium CTA button */
+    .cta-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+
+      padding:12px 16px;
+      border-radius:12px;
+
+      border:1px solid rgba(255,255,255,0.16);
+      background:rgba(255,255,255,0.05);
+      color:rgba(255,255,255,0.90);
+
+      text-decoration:none;
+      font-size:15px;
+      letter-spacing:0.2px;
+
+      transition:transform 160ms ease, background 160ms ease, border-color 160ms ease;
+    }
+
+    .cta-button:hover{
+      background:rgba(255,255,255,0.08);
+      border-color:rgba(255,255,255,0.22);
+      transform:translateY(-1px);
+    }
+
+    .cta-button:active{
+      transform:translateY(0px);
+    }
 
     /* Mobile scaling */
     @media (max-width:640px){
@@ -163,17 +193,15 @@
         min-height:82vh;
         padding:130px 16px 56px;
       }
-      
-  .hero-brand{
-    margin:10px 0 12px 0;
-    padding:2px;            /* match the tighter bubble */
-    border-radius:14px;
-    background:rgba(0,0,0,0.28);
-    backdrop-filter:blur(4px);
-    -webkit-backdrop-filter:blur(4px);
-  }
 
-
+      .hero-brand{
+        margin:10px 0 12px 0;
+        padding:2px;
+        border-radius:14px;
+        background:rgba(0,0,0,0.28);
+        backdrop-filter:blur(4px);
+        -webkit-backdrop-filter:blur(4px);
+      }
 
       .hero-brand img{
         width:96px;
@@ -187,6 +215,11 @@
       h1{font-size:40px;line-height:1.10;}
       .tagline{font-size:15px;}
       main{font-size:17px;}
+
+      .cta-button{
+        width:100%;
+        padding:12px 14px;
+      }
     }
   </style>
 </head>
@@ -196,12 +229,10 @@
   <header class="Porsche">
     <div class="Porsche-inner">
 
-      <!-- ✅ Logo is outside the blurred title panel now -->
       <div class="hero-brand" aria-hidden="true">
         <img src="MM - White Transparent.png" alt="" />
       </div>
 
-      <!-- ✅ Blur ONLY covers title + description -->
       <div class="hero-card">
         <h1>Millionaire Minds</h1>
         <p class="tagline">A weekly environment for clarity, skill-building, and long-term growth.</p>
@@ -325,9 +356,10 @@
       <h2>Interested in Joining?</h2>
       <div class="cta">
         <strong>If this vision resonates, you’re invited to learn more or express interest.</strong>
-        <p style="margin:0;color:var(--muted);">
-          For now, you can add a contact method here (a form, a link, or a simple instruction). Keeping it minimal is fine.
-        </p>
+
+        <a class="cta-button" href="https://forms.gle/dKHv2qPyoKybjTj37" target="_blank" rel="noopener">
+          Express Interest
+        </a>
       </div>
     </section>
 
