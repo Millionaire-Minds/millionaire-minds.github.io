@@ -5,10 +5,9 @@
   <title>Millionaire Minds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
- <link rel="apple-touch-icon" sizes="180x180" href="MM%20-%20BonW%20Zoomed.png">
+  <!-- iPhone Add-to-Home-Screen Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="MM%20-%20BonW%20Zoomed.png">
   <link rel="apple-touch-icon" sizes="180x180" media="(prefers-color-scheme: dark)" href="MM%20-%20BonW%20Zoomed.png">
-
-
 
   <style>
     :root{
@@ -21,6 +20,7 @@
     }
 
     *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
     body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text);}
 
     /* HERO */
@@ -59,7 +59,7 @@
       max-width:var(--max);
     }
 
-    /* Logo sits ABOVE the blur panel now */
+    /* Logo above the blur panel */
     .hero-brand{
       display:inline-flex;
       align-items:center;
@@ -82,7 +82,7 @@
       height:auto;
     }
 
-    /* Blur panel ONLY covers title + description */
+    /* Blur panel only covers title + description */
     .hero-card{
       width:100%;
       background:var(--panel);
@@ -154,30 +154,31 @@
       margin:0 0 10px;
     }
 
+    /* CTA box */
     .cta{
       border:1px solid var(--line);
       border-radius:12px;
       padding:18px 18px;
       background:rgba(255,255,255,0.03);
-      text-align:center; /* ✅ center the button in the box */
+      text-align:center;
     }
 
     .cta strong{
       display:block;
       margin-bottom:12px;
-      text-align:left; /* keep your headline aligned nicely */
+      text-align:left;
     }
 
-    /* ✅ Bigger, higher-contrast, premium CTA button */
+    /* Premium CTA button (scrolls to form) */
     .cta-button{
       display:inline-flex;
       align-items:center;
       justify-content:center;
 
-      padding:18px 34px; /* ✅ ~2x size */
+      padding:18px 34px;
       border-radius:16px;
 
-      background:rgba(255,255,255,0.92); /* ✅ strong contrast */
+      background:rgba(255,255,255,0.92);
       color:rgba(0,0,0,0.88);
 
       border:1px solid rgba(255,255,255,0.25);
@@ -200,6 +201,27 @@
 
     .cta-button:active{
       transform:translateY(0px);
+    }
+
+    /* Embedded Google Form (Premium wrapper) */
+    .form-wrap{
+      margin-top:16px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+
+      background:rgba(18,18,18,0.55);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+
+      box-shadow:0 18px 60px rgba(0,0,0,0.45);
+    }
+
+    .form-wrap iframe{
+      width:100%;
+      height:2200px;
+      border:0;
+      display:block;
     }
 
     /* Mobile scaling */
@@ -236,8 +258,8 @@
         padding:18px 18px;
       }
 
-      .cta strong{
-        text-align:left;
+      .form-wrap iframe{
+        height:2400px;
       }
     }
   </style>
@@ -376,9 +398,25 @@
       <div class="cta">
         <strong>If this vision resonates, you’re invited to learn more or express interest.</strong>
 
-        <a class="cta-button" href="https://forms.gle/dKHv2qPyoKybjTj37" target="_blank" rel="noopener">
-          Request an Invite
+        <!-- ✅ Auto-scroll button -->
+        <a class="cta-button" href="#apply">
+          Click to Join
         </a>
+      </div>
+    </section>
+
+    <!-- EMBEDDED FORM -->
+    <section id="apply">
+      <h2>Application</h2>
+
+      <div class="form-wrap">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfXJhW3apJZCBYqCv45h-ML1X-aBOM3KykS93rWRY1BOfm62A/viewform?embedded=true"
+          loading="lazy"
+          title="Millionaire Minds Application"
+        >
+          Loading…
+        </iframe>
       </div>
     </section>
 
